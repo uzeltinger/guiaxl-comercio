@@ -1,0 +1,49 @@
+
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-title>Perfil</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <form (ngSubmit)="perfilForm()">
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="name" name="name" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="lastname" name="lastname" placeholder="Apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" [(ngModel)]="dni" name="dni" placeholder="DNI"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label class="ion-label-sex">Sexo</ion-label>
+          <ion-select placeholder="Seleccione" interface="popover">
+            <ion-option value="f">Femenino</ion-option>
+            <ion-option value="m">Masculino</ion-option>
+          </ion-select>
+        </ion-item>
+      <ion-item>
+        <ion-input type="text" [(ngModel)]="username" name="username" placeholder="Usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="password" name="password" placeholder="Contraseña"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="password" [(ngModel)]="password2" name="password2" placeholder="Reingresar Contraseña"></ion-input>
+      </ion-item>
+  
+      <div class="login-botones">
+        <p><br></p>
+        <button ion-button type="submit" block>Actualizar perfil</button>
+      </div>
+  
+    </form>
+  
+  </ion-content>
+  
+  <div *ngIf="showSplash" class="splash">
+    <div class="spinner">
+      <ion-spinner name="crescent"></ion-spinner>
+    </div>
+  </div>

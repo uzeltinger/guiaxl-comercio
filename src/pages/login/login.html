@@ -1,0 +1,30 @@
+<ion-content padding>
+
+  <div class="logo-login">
+      <img src="assets/images/logo-login.png">
+  </div>  
+
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="username" name="username" placeholder="Usuario"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input type="password" [(ngModel)]="password" name="password"  placeholder="Contraseña"></ion-input>
+    </ion-item>
+    
+    <div class="login-botones">
+        <button ion-button type="submit" block (click)="ingresar()">Ingresar</button>
+        <button ion-button type="button" block (click)="registrarse()">Registrate</button>
+
+    </div>
+    
+  </form>
+
+  
+
+</ion-content>
+<div *ngIf="showSplash" class="splash">
+	<div class="spinner">
+		<ion-spinner name="crescent"></ion-spinner>
+	</div>
+</div>
